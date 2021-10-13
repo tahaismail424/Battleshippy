@@ -1,0 +1,157 @@
+@font-face {
+    font-family: gameTitle;
+    src: url(./assets/pricedown\ bl.otf);
+}
+
+@font-face {
+    font-family: gameText;
+    src: url(./assets/kongtext.ttf);
+}
+
+.hello {
+    color: blue;
+}
+
+.title {
+    font-family: gameTitle;
+    text-align: center;
+    font-size: 25vmin;
+}
+
+.menu-button {
+    display: block;
+    width: 20%;
+    height: 60%;
+    font-family: gameText;
+    font-size: 3vmin;
+    margin: auto;
+    padding: 2vmin;
+}
+
+.play-box {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: auto;
+
+}
+
+.board {
+    display: grid;
+    margin-left: 5%;
+    height: 500px;
+    width: 500px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
+.board-square {
+    position: relative;
+    border-style: solid;
+    border-width: .2vmin;
+    height: 50px;
+    width: 50px;
+}
+
+.title-2 {
+    font-family: gameTitle;
+    text-align: center;
+    font-size: 5vmin;
+}
+
+.ship-space {
+    display: grid;
+    margin: auto;
+    height: 500px;
+    width: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(11, 1fr)
+}
+
+.ship {
+    margin: 30px;
+}
+
+#ship-0 {
+    grid-column-start: 2;
+    grid-row-start: 9;
+    grid-row-end: span 2;
+}
+
+#ship-1 {
+    grid-column-start: 2;
+    grid-row-start: 5;
+    grid-row-end: span 3;
+
+}
+
+#ship-2 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: span 3;
+
+}
+
+#ship-3 {
+    grid-column-start: 1;
+    grid-row-start: 7;
+    grid-row-end: span 4;
+}
+
+#ship-4 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: span 5;
+}
+
+.vertical {
+    position: absolute;
+    z-index: 1;
+    margin-left: 22%;
+    margin-top: 2%;
+}
+
+.horizontal {
+    position: absolute;
+    z-index: 1;
+    margin-left: 2%;
+    margin-top: 28%;
+}
+
+.hit-x {
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    left: 0px;
+}
+
+.hit {
+    background-color: LightCoral;
+}
+
+.position {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-family: gameText;
+    border-style: solid;
+    border-width: 10px;
+    padding: 20px;
+    font-size: 5vmin;
+
+
+}
+
+.miss {
+    background-color: PowderBlue;
+}
+
+.board-button {
+    position: absolute;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
